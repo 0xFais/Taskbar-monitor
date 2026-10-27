@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/TaskbarMonitor.App/TaskbarMonitor.App.csproj" />
+    <Project Path="src/TaskbarMonitor.Core/TaskbarMonitor.Core.csproj" />
+    <Project Path="src/TaskbarMonitor.Monitoring/TaskbarMonitor.Monitoring.csproj" />
+    <Project Path="src/TaskbarMonitor.Windows/TaskbarMonitor.Windows.csproj" />
+  </Folder>
+</Solution>

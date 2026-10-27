@@ -1,0 +1,9 @@
+<UserControl x:Class="TaskbarMonitor.App.TaskbarPanelView" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+ <Viewbox Stretch="Uniform" StretchDirection="DownOnly" HorizontalAlignment="Left" VerticalAlignment="Center">
+  <ItemsControl ItemsSource="{Binding Sections}"><ItemsControl.ItemsPanel><ItemsPanelTemplate><StackPanel Orientation="Horizontal"/></ItemsPanelTemplate></ItemsControl.ItemsPanel><ItemsControl.ItemTemplate><DataTemplate>
+   <Border Width="{Binding Width}" Height="40" Margin="{Binding Spacing}" Visibility="{Binding SectionVisibility}" CornerRadius="{Binding Corners}" Background="{Binding FillBrush}" BorderBrush="{Binding AccentBrush}" BorderThickness="{Binding OutlineThickness}" Padding="7,1" ToolTip="{Binding Id}">
+    <Viewbox Stretch="Uniform" StretchDirection="DownOnly" HorizontalAlignment="Left"><StackPanel VerticalAlignment="Center"><Grid><Grid.ColumnDefinitions><ColumnDefinition Width="Auto"/><ColumnDefinition Width="*"/></Grid.ColumnDefinitions><TextBlock Text="{Binding Label}" Visibility="{Binding LabelVisibility}" FontSize="{Binding LabelFontSize}" Foreground="{Binding AccentBrush}" Margin="0,0,5,0" VerticalAlignment="Center" FontFamily="{Binding Font}"/><TextBlock Grid.Column="1" Text="{Binding Primary}" Foreground="{Binding TextBrush}" FontSize="{Binding FontSize}" FontFamily="{Binding Font}" TextTrimming="CharacterEllipsis"/></Grid><TextBlock Text="{Binding Detail}" Visibility="{Binding DetailVisibility}" Foreground="{Binding DetailBrush}" FontSize="{Binding DetailFontSize}" FontFamily="{Binding Font}" TextTrimming="CharacterEllipsis"/></StackPanel></Viewbox>
+   </Border>
+  </DataTemplate></ItemsControl.ItemTemplate></ItemsControl>
+ </Viewbox>
+</UserControl>

@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <PlatformTarget>x64</PlatformTarget>
+    <ApplicationIcon>Assets\taskbar-monitor-logo.ico</ApplicationIcon>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <!-- WPF owns DPI configuration through the manifest; WinForms is only used for the tray icon. -->
+    <NoWarn>$(NoWarn);WFO0003</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Resource Include="Assets\taskbar-monitor-logo.ico" />
+    <Resource Include="Assets\taskbar-monitor-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TaskbarMonitor.Core\TaskbarMonitor.Core.csproj" />
+    <ProjectReference Include="..\TaskbarMonitor.Monitoring\TaskbarMonitor.Monitoring.csproj" />
+    <ProjectReference Include="..\TaskbarMonitor.Windows\TaskbarMonitor.Windows.csproj" />
+  </ItemGroup>
+  <Target Name="CreatePortableMarker" AfterTargets="Publish" Condition="'$(PortableMode)' == 'true'">
+    <WriteLinesToFile File="$(PublishDir)portable.flag" Lines="Taskbar-monitor portable mode" Overwrite="true" />
+  </Target>
+</Project>

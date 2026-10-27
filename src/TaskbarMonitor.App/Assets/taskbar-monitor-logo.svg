@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">Taskbar Monitor — Pulse Glyph</title>
+  <desc id="desc">An abstract monitor outline framing a crisp live activity pulse.</desc>
+  <defs><linearGradient id="p" x1="55" y1="128" x2="201" y2="128" gradientUnits="userSpaceOnUse"><stop stop-color="#06B6D4"/><stop offset="1" stop-color="#10B981"/></linearGradient></defs>
+  <rect x="34" y="43" width="188" height="139" rx="28" fill="#0F172A"/>
+  <rect x="45" y="54" width="166" height="117" rx="19" fill="#111827" stroke="#334155" stroke-width="3"/>
+  <path d="M66 115h28l13-27 19 53 19-43 13 17h32" fill="none" stroke="url(#p)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="190" cy="115" r="7" fill="#A7F3D0"/>
+  <path d="M104 194v11M152 194v11M86 211h84" stroke="#0F172A" stroke-width="11" stroke-linecap="round"/>
+  <path d="M89 190h78" stroke="#64748B" stroke-width="8" stroke-linecap="round"/>
+</svg>
